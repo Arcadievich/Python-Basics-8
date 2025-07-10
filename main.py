@@ -55,6 +55,13 @@ def main():
 
     map = folium.Map(location=(a_coords), zoom_start=16)
 
+    folium.Marker(
+        location=a_coords,
+        tooltip='Нажми на меня!',
+        popup='Вы здесь',
+        icon=folium.Icon(color='red'),
+    ).add_to(map)
+
     for coffee_shop in nearest_coffee_shops:
         folium.Marker(
             location=[coffee_shop['latitude'], coffee_shop['longitude']],
