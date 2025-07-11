@@ -44,7 +44,7 @@ def main():
     for coffee_shop in coffee_shops:
         relative_coffee_shop = {}
         relative_coffee_shop['title'] = coffee_shop['Name']
-        b_coords = f'{coffee_shop['Latitude_WGS84']} {coffee_shop['Longitude_WGS84']}'
+        b_coords = f'{coffee_shop["Latitude_WGS84"]} {coffee_shop["Longitude_WGS84"]}'
         relative_coffee_shop['distance'] = distance.distance(a_coords, b_coords).km
         relative_coffee_shop['latitude'] = coffee_shop['Latitude_WGS84']
         relative_coffee_shop['longitude'] = coffee_shop['Longitude_WGS84']
